@@ -71,11 +71,13 @@
         "copy-ressources": "sources/ressources/copyscript.sh",
         "release": "toolset/thingy-build-system/pwa/release-script.sh",
         "clean-impressum-css": "cleancss -O2 'specialComments:0' /home/lenny/thingies/bootschafterin-website/toolset/build/css/dirty/impressum.css --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/impressum.css",
-        "purge-impressum-css": "purgecss --css /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/impressum.css --content /home/lenny/thingies/bootschafterin-website/toolset/build/html/pretty/impressum.html --out /home/lenny/thingies/bootschafterin-website/toolset/build/css/purged",
+        "purge-impressum-css": "purgecss --css /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/impressum.css --content /home/lenny/thingies/bootschafterin-website/toolset/build/html/pretty/impressum.html --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/purged",
         "clean-index-css": "cleancss -O2 'specialComments:0' /home/lenny/thingies/bootschafterin-website/toolset/build/css/dirty/index.css --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/index.css",
-        "purge-index-css": "purgecss --css /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/index.css --content /home/lenny/thingies/bootschafterin-website/toolset/build/html/pretty/index.html --out /home/lenny/thingies/bootschafterin-website/toolset/build/css/purged",
-        "clean-css": "run-p clean-impressum-css clean-index-css",
-        "purge-css": "run-p purge-impressum-css purge-index-css"
+        "purge-index-css": "purgecss --css /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/index.css --content /home/lenny/thingies/bootschafterin-website/toolset/build/html/pretty/index.html --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/purged",
+        "clean-css": "cleancss -O2 'specialComments:0' /home/lenny/thingies/bootschafterin-website/toolset/build/css/dirty/index.css --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/index.css",
+        "purge-css": "purgecss --css /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/index.css --content /home/lenny/thingies/bootschafterin-website/toolset/build/html/pretty/index.html --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/purged",
+        "clean-events-css": "cleancss -O2 'specialComments:0' /home/lenny/thingies/bootschafterin-website/toolset/build/css/dirty/events.css --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/events.css",
+        "purge-events-css": "purgecss --css /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/events.css --content /home/lenny/thingies/bootschafterin-website/toolset/build/html/pretty/events.html --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/purged"
     },
     "repository": {
         "type": "git",
@@ -89,20 +91,20 @@
     "homepage": "https://github.com/JhonnyJason/bootschafterin-website#readme",
     "dependencies": {
         "coffeescript": "^2.5.1",
-        "npm-check-updates": "^4.0.2",
+        "npm-check-updates": "^11.7.1",
         "npm-run-all": "^4.1.5",
-        "thingy-allmodules-sync": "^0.1.2",
-        "thingy-module-gen": "^0.1.3",
-        "thingymodulecreate": "^0.1.6",
-        "thingysync": "^0.1.1",
-        "browser-sync": "^2.26.7",
-        "clean-css-cli": "^4.3.0",
+        "thingy-allmodules-sync": "^0.1.3",
+        "thingy-module-gen": "^0.1.4",
+        "thingymodulecreate": "^0.1.8",
+        "thingysync": "^0.1.2",
+        "browser-sync": "^2.26.14",
+        "clean-css-cli": "^5.3.0",
         "html-minifier": "^4.0.0",
         "pug-cli": "^1.0.0-alpha6",
-        "purgecss": "^1.4.2",
-        "stylus": "^0.54.7",
-        "webpack": "^4.41.6",
-        "webpack-cli": "^3.3.11"
+        "purgecss": "^4.0.3",
+        "stylus": "^0.54.8",
+        "webpack": "^5.40.0",
+        "webpack-cli": "^4.7.2"
     },
     "type": "pwa"
 }
