@@ -74,10 +74,12 @@
         "purge-impressum-css": "purgecss --css /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/impressum.css --content /home/lenny/thingies/bootschafterin-website/toolset/build/html/pretty/impressum.html --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/purged",
         "clean-index-css": "cleancss -O2 'specialComments:0' /home/lenny/thingies/bootschafterin-website/toolset/build/css/dirty/index.css --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/index.css",
         "purge-index-css": "purgecss --css /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/index.css --content /home/lenny/thingies/bootschafterin-website/toolset/build/html/pretty/index.html --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/purged",
-        "clean-css": "cleancss -O2 'specialComments:0' /home/lenny/thingies/bootschafterin-website/toolset/build/css/dirty/index.css --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/index.css",
-        "purge-css": "purgecss --css /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/index.css --content /home/lenny/thingies/bootschafterin-website/toolset/build/html/pretty/index.html --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/purged",
+        "clean-css": "run-p clean-gallerie-css clean-index-css",
+        "purge-css": "run-p purge-gallerie-css purge-index-css",
         "clean-events-css": "cleancss -O2 'specialComments:0' /home/lenny/thingies/bootschafterin-website/toolset/build/css/dirty/events.css --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/events.css",
-        "purge-events-css": "purgecss --css /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/events.css --content /home/lenny/thingies/bootschafterin-website/toolset/build/html/pretty/events.html --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/purged"
+        "purge-events-css": "purgecss --css /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/events.css --content /home/lenny/thingies/bootschafterin-website/toolset/build/html/pretty/events.html --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/purged",
+        "clean-gallerie-css": "cleancss -O2 'specialComments:0' /home/lenny/thingies/bootschafterin-website/toolset/build/css/dirty/gallerie.css --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/gallerie.css",
+        "purge-gallerie-css": "purgecss --css /home/lenny/thingies/bootschafterin-website/toolset/build/css/clean/gallerie.css --content /home/lenny/thingies/bootschafterin-website/toolset/build/html/pretty/gallerie.html --output /home/lenny/thingies/bootschafterin-website/toolset/build/css/purged"
     },
     "repository": {
         "type": "git",
